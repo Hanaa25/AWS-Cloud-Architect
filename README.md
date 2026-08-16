@@ -4,7 +4,7 @@
 
 This project demonstrates the design of a **highly available, scalable, secure, and cost-effective web application on AWS**.
 
-The project focuses on AWS cloud architecture, networking, security, scalability, high availability, and cost optimization.
+The project focuses on cloud architecture, networking, security, scalability, high availability, and cost optimization.
 
 ---
 
@@ -40,17 +40,17 @@ The project focuses on AWS cloud architecture, networking, security, scalability
 
 ## 📄 Project Documentation
 
-**[📄 Open Project1.PDF](./project1.pdf)**
+[📄 Open Project 1 PDF](./project%201.pdf)
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
-AWS-Cloud-Projects/
+AWS-Cloud-Architect/
 │
 ├── README.md
-├── project1.pdf
+├── project 1.pdf
 └── Diagram.png
 ```
 
