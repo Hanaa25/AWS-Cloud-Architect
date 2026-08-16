@@ -1,119 +1,136 @@
-# Project 1: Building a Highly Available, Scalable Web Application
+# ☁️ AWS Cloud Projects
 
-📄 The project documentation and architecture diagrams are included in **project1.pdf**.  
-🖼️ All project screenshots and diagrams are contained within the **project1.pdf** file.  
-[Open project1.pdf](project1.pdf)
+This repository contains AWS Cloud projects demonstrating practical skills in cloud architecture, networking, security, scalability, high availability, and cost optimization.
 
+---
+
+# 🚀 Project 1: Building a Highly Available, Scalable Web Application
+
+📄 **Project Documentation:** [Open project1.pdf](project1.pdf)
+
+🖼️ **Project Architecture:**
 
 ![AWS Infrastructure](Diagram.png)
+
 ## 🧩 Project Overview
-The challenge is to **plan, design, build, and deploy** a web application on the **AWS Cloud** following the **AWS Well-Architected Framework** best practices.
 
-During the **peak admissions period**, the application must support **thousands of users** and be:
-- Highly available  
-- Scalable  
-- Load balanced  
-- Secure  
-- High performing  
-- Cost optimized  
+The project focuses on planning, designing, building, and deploying a highly available and scalable web application on AWS following the **AWS Well-Architected Framework** best practices.
 
-The application manages **student records** (view, add, delete, modify).
+The application manages **student records**, allowing users to:
 
----
+* View student records
+* Add student records
+* Modify student records
+* Delete student records
 
-## 🎯 Requirements
+The architecture is designed to support **thousands of users during peak admission periods**.
 
-### Functional
-- The application must allow users to **view, add, delete, or modify** student records **without perceivable delay**.
+## 🎯 Key Requirements
 
-### Load Balanced
-- Traffic is **evenly distributed** to prevent resource overload or underutilization.
+* **Highly Available** – Minimal downtime if a server becomes unavailable.
+* **Scalable** – Automatically scales according to demand.
+* **Load Balanced** – Distributes traffic across multiple web servers.
+* **Secure** – Protects the database and credentials.
+* **High Performing** – Supports fast application operations.
+* **Cost Optimized** – Minimizes unnecessary operational costs.
 
-### Scalable
-- The architecture must **scale automatically** based on user demand.
+## 🏗️ AWS Architecture
 
-### Highly Available
-- The solution must have **minimal downtime** even if a server becomes unavailable.
+The solution includes:
 
-### Secure
-- Database is **not directly accessible** from public networks.  
-- Web servers and the database are accessible **only on appropriate ports**.  
-- The web app is **accessible over the internet**.  
-- **Database credentials** are stored securely (not hardcoded).
-
-### Cost Optimized
-- The design should **minimize operational costs**.
-
-### High Performing
-- Operations (view, add, delete, modify) must perform **without delay** under normal and peak loads.
-
----
+* Amazon VPC
+* Public and Private Subnets
+* Amazon EC2
+* Application Load Balancer
+* Auto Scaling Group
+* Amazon RDS
+* AWS Secrets Manager
+* Security Groups
 
 ## 🗂️ Project Phases
 
-### Phase 1: Planning the Design and Estimating Cost
+### Phase 1 – Planning & Cost Estimation
 
-#### Task 1: Creating an Architectural Diagram
-- Design a visual AWS architecture showing all components:
-  - VPC, Subnets, EC2 Instances, Load Balancer, Auto Scaling, RDS, Secrets Manager.
+* Designed the AWS architecture.
+* Created an architectural diagram.
+* Estimated the project cost over three years.
 
-#### Task 2: Developing a Cost Estimate
-- Estimate 3-year cost with the following assumptions:
-  - **EC2:** No upfront payment.  
-  - **RDS:** Partial upfront payment.  
-  - **Application Load Balancer:** Pay-as-you-go.
+### Phase 2 – Basic Web Application
 
----
+* Created a VPC named `project_app`.
+* Launched an EC2 instance named `web1`.
+* Deployed and tested the web application.
 
-### Phase 2: Creating a Basic Functional Web Application
+### Phase 3 – Decoupling Application Components
 
-#### Task 1: Creating a Virtual Network
-- Create a **VPC** named `project_app`.
+* Created an Amazon RDS database named `database1`.
+* Connected the web application to RDS.
+* Stored database credentials securely using AWS Secrets Manager.
+* Created a second web server named `web2`.
+* Tested connectivity between the web servers and database.
 
-#### Task 2: Creating a Virtual Machine
-- Launch an **EC2 instance** named `web1`.
+### Phase 4 – High Availability & Scalability
 
-#### Task 3: Testing the Deployment
-- Deploy the web app and verify access via browser.
-
----
-
-### Phase 3: Decoupling the Application Components
-
-#### Task 1: Creating and Configuring the Amazon RDS Database
-- Create a database named `database1` in **Amazon RDS**.
-
-#### Task 2: Configuring the Development Environment
-- Update the web app code to connect to the RDS instance.
-
-#### Task 3: Provisioning AWS Secrets Manager
-- Create a secret named `Mydbsecret` to securely store DB credentials.
-
-#### Task 4: Provisioning a Second Web Server
-- Launch another **EC2 instance** named `web2`.
-
-#### Task 5: Testing the Application
-- Verify both web servers can connect to the database successfully.
-
----
-
-### Phase 4: Implementing High Availability and Scalability
-
-#### Task 1: Creating a Target Group
-- Create a **Target Group** named `web-TG`.
-
-#### Task 2: Creating an Application Load Balancer
-- Create an **ALB** named `WEB-LB` and attach the `web-TG` targets.
-
-#### Task 3: Implementing Auto Scaling
-- Create a **Launch Template** named `template-web`.  
-- Create an **Auto Scaling Group** named `web-auto` linked to the launch template.  
-- Configure scaling policies based on CPU utilization or request count.
-
----
+* Created a Target Group named `web-TG`.
+* Created an Application Load Balancer named `WEB-LB`.
+* Created a Launch Template named `template-web`.
+* Created an Auto Scaling Group named `web-auto`.
+* Configured automatic scaling based on application demand.
 
 ## ✅ Expected Outcome
-By the end of the project:
-- The web app is **fully functional**, **secure**, **scalable**, **highly available**, and **cost-effective**.  
-- Users can **seamlessly manage student records** even under peak loads.  
-- The design adheres to the **AWS Well-Architected Framework pillars**.
+
+The final architecture provides a:
+
+* Highly available application
+* Scalable web tier
+* Load-balanced environment
+* Secure database architecture
+* High-performing application
+* Cost-optimized AWS solution
+
+---
+
+# 🚀 Project 2
+
+📄 **Project Documentation:** [Open project2.pdf](project2.pdf)
+
+The second project is documented separately in **project2.pdf**.
+
+---
+
+## 📚 AWS Skills Demonstrated
+
+Through these projects, I practiced:
+
+* AWS VPC and networking
+* Amazon EC2
+* Amazon RDS
+* Application Load Balancer
+* Auto Scaling
+* AWS Secrets Manager
+* Security Groups
+* High Availability
+* Scalability
+* Load Balancing
+* AWS Well-Architected Framework
+* Cost Optimization
+* Cloud Architecture
+
+---
+
+## 📁 Repository Structure
+
+```text
+AWS-Cloud-Projects/
+│
+├── README.md
+├── project1.pdf
+├── project2.pdf
+└── Diagram.png
+```
+
+---
+
+## 🎓 Learning Outcome
+
+These projects demonstrate practical experience in designing and deploying **secure, highly available, scalable, and cost-effective AWS architectures**.
