@@ -6,7 +6,7 @@ A practical AWS Cloud project demonstrating the design and deployment of a **hig
 
 ## 🚀 Project Overview
 
-The goal of this project is to build a reliable web application infrastructure on AWS that can handle increasing traffic while maintaining **high availability, security, scalability, and performance**.
+This project demonstrates the design and deployment of a **highly available, scalable, secure, and cost-effective web application on AWS**.
 
 The application manages **student records** and allows users to:
 
@@ -15,31 +15,29 @@ The application manages **student records** and allows users to:
 * Modify student records
 * Delete student records
 
-The infrastructure is designed to distribute application traffic, automatically scale compute resources, and securely connect the application layer with the database.
+The architecture is designed to improve **availability, scalability, security, performance, and cost efficiency**.
 
 ---
 
 ## 🏗️ AWS Architecture
 
-![AWS Infrastructure](Diagram.png)
+![AWS Infrastructure](./Diagram.png)
 
-The architecture uses multiple AWS services working together to provide a secure and highly available application environment.
+The architecture uses multiple AWS services working together to provide a reliable and secure application environment.
 
 ### Architecture Components
 
 * **Amazon VPC** — Provides an isolated network environment.
 * **Amazon EC2** — Hosts the web application.
 * **Application Load Balancer** — Distributes incoming traffic across EC2 instances.
-* **Auto Scaling** — Automatically adjusts the number of EC2 instances according to demand.
+* **Auto Scaling** — Automatically adjusts EC2 capacity based on demand.
 * **Amazon RDS** — Provides a managed relational database for student records.
-* **AWS Secrets Manager** — Securely stores database credentials and sensitive information.
-* **Security Groups** — Control inbound and outbound network traffic between resources.
+* **AWS Secrets Manager** — Securely stores sensitive database credentials.
+* **Security Groups** — Control network traffic between AWS resources.
 
 ---
 
 ## 🔄 Application Flow
-
-The application follows this general traffic flow:
 
 ```text
 Users
@@ -54,21 +52,25 @@ EC2 Instances
 Amazon RDS
 ```
 
-Sensitive credentials are securely managed using **AWS Secrets Manager**, while **Security Groups** restrict communication between the different application components.
+The Application Load Balancer distributes incoming requests across the available EC2 instances.
+
+The EC2 instances communicate with Amazon RDS to store and retrieve student records.
+
+AWS Secrets Manager is used to securely manage sensitive credentials, while Security Groups control network access between resources.
 
 ---
 
 ## 🧩 AWS Services Used
 
-| AWS Service               | Purpose                            |
-| ------------------------- | ---------------------------------- |
-| Amazon VPC                | Network isolation and architecture |
-| Amazon EC2                | Application hosting                |
-| Application Load Balancer | Traffic distribution               |
-| Auto Scaling              | Automatic scaling of EC2 instances |
-| Amazon RDS                | Managed relational database        |
-| AWS Secrets Manager       | Secure credential management       |
-| Security Groups           | Network access control             |
+| AWS Service               | Purpose                              |
+| ------------------------- | ------------------------------------ |
+| Amazon VPC                | Network isolation and infrastructure |
+| Amazon EC2                | Application hosting                  |
+| Application Load Balancer | Traffic distribution                 |
+| Auto Scaling              | Automatic scaling of EC2 instances   |
+| Amazon RDS                | Managed relational database          |
+| AWS Secrets Manager       | Secure credential management         |
+| Security Groups           | Network traffic control              |
 
 ---
 
@@ -76,42 +78,42 @@ Sensitive credentials are securely managed using **AWS Secrets Manager**, while 
 
 ### High Availability
 
-The architecture is designed to reduce single points of failure and maintain application availability.
+The architecture is designed to minimize single points of failure and maintain application availability.
 
 ### Scalability
 
-Auto Scaling allows the application environment to automatically increase or decrease compute capacity according to workload requirements.
+EC2 Auto Scaling allows the infrastructure to automatically adjust compute capacity according to workload requirements.
 
 ### Load Balancing
 
-The Application Load Balancer distributes incoming requests across available EC2 instances.
+The Application Load Balancer distributes incoming traffic across available EC2 instances.
 
-### Database Architecture
+### Secure Database Architecture
 
-Amazon RDS provides a managed relational database for storing and managing student records.
+Amazon RDS is used as the managed database layer, while network access is controlled using Security Groups.
 
 ### Network Security
 
-Security Groups control which resources can communicate with each other and which traffic is allowed.
+Security Groups restrict inbound and outbound traffic between the different components of the architecture.
 
 ### Secrets Management
 
-AWS Secrets Manager is used to securely manage sensitive database credentials instead of storing them directly in application code.
+AWS Secrets Manager securely stores sensitive credentials instead of exposing them directly in application code.
 
 ### Cost Optimization
 
-The architecture considers resource utilization and AWS cost optimization while maintaining the required availability and performance.
+The architecture considers resource utilization and cost while maintaining the required availability, security, and performance.
 
 ---
 
 ## 🔐 Security
 
-Security was considered at multiple layers of the architecture:
+Security is implemented through multiple layers:
 
-* Network isolation using **Amazon VPC**
-* Controlled access using **Security Groups**
-* Secure storage of credentials using **AWS Secrets Manager**
-* Separation between application and database resources
+* **Amazon VPC** for network isolation
+* **Security Groups** for access control
+* **AWS Secrets Manager** for sensitive credentials
+* Separation between the application and database layers
 * Restricted communication between infrastructure components
 
 ---
@@ -122,43 +124,49 @@ The architecture supports scalability and availability through:
 
 * Application Load Balancer
 * EC2 Auto Scaling
-* Multiple application instances
-* Managed Amazon RDS database
+* Multiple EC2 application instances
+* Amazon RDS
 * VPC-based network architecture
 
-This allows the application to handle changing workloads while improving reliability and availability.
+This allows the application to handle changing workloads while improving reliability and performance.
+
+---
+
+## 💰 Cost Optimization
+
+Cost considerations are included as part of the project design.
+
+The architecture aims to balance:
+
+* High Availability
+* Scalability
+* Security
+* Performance
+* Cost Optimization
+
+A detailed cost estimation is included in the project documentation.
 
 ---
 
 ## 📄 Project Documentation
 
-The complete project documentation contains the detailed implementation process, configuration steps, screenshots, architecture, testing, and cost estimation.
+The complete project documentation contains:
 
-📄 **[Open Project 1 Documentation](project%201.pdf)**
+* Detailed implementation steps
+* AWS configuration
+* Architecture
+* Screenshots
+* Testing
+* Security configuration
+* Cost estimation
 
----
-
-## 📸 Project Screenshots
-
-The project architecture and implementation screenshots are included in the project documentation.
-
-### AWS Architecture Diagram
-
-![AWS Infrastructure](Diagram.png)
+📄 **[Open Project 1 Documentation](./project1.pdf)**
 
 ---
 
-## 💰 Cost Considerations
+## 📸 Architecture Diagram
 
-The project includes a cost estimation section covering the AWS resources used in the architecture.
-
-The design aims to balance:
-
-* Availability
-* Scalability
-* Security
-* Performance
-* Cost Optimization
+![AWS Infrastructure](./Diagram.png)
 
 ---
 
@@ -166,17 +174,20 @@ The design aims to balance:
 
 Through this project, I gained practical experience in:
 
-* Designing AWS Cloud architectures
-* Building VPC-based infrastructures
-* Deploying applications on Amazon EC2
-* Configuring Application Load Balancers
-* Implementing EC2 Auto Scaling
-* Working with Amazon RDS
-* Managing secrets with AWS Secrets Manager
-* Configuring Security Groups
-* Designing highly available architectures
-* Applying cloud security principles
-* Considering AWS cost optimization
+* AWS Cloud Architecture
+* Amazon VPC
+* Amazon EC2
+* Amazon RDS
+* Application Load Balancer
+* EC2 Auto Scaling
+* AWS Secrets Manager
+* Security Groups
+* High Availability
+* Scalability
+* Load Balancing
+* Network Security
+* Cost Optimization
+* AWS Well-Architected Framework
 
 ---
 
@@ -186,7 +197,7 @@ Through this project, I gained practical experience in:
 AWS-Cloud-Projects/
 │
 ├── README.md
-├── project 1.pdf
+├── project1.pdf
 └── Diagram.png
 ```
 
@@ -196,30 +207,4 @@ AWS-Cloud-Projects/
 
 This project demonstrates the practical design of a **secure, highly available, scalable, and cost-effective web application architecture on AWS**.
 
-It combines networking, compute, database, security, load balancing, and auto-scaling services into a complete cloud solution based on AWS architectural best practices.
-
----
-
-## 📚 Technologies & AWS Services
-
-**Cloud Platform:** AWS
-
-**Services:**
-
-* Amazon VPC
-* Amazon EC2
-* Amazon RDS
-* Application Load Balancer
-* Auto Scaling
-* AWS Secrets Manager
-* Security Groups
-
-**Core Concepts:**
-
-* High Availability
-* Scalability
-* Load Balancing
-* Network Security
-* Database Security
-* Cost Optimization
-* Cloud Architecture
+It combines networking, compute, database, security, load balancing, and auto-scaling services into a complete AWS cloud solution following cloud architecture best practices.
