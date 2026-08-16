@@ -1,6 +1,6 @@
 # ☁️ AWS Project 1 — Highly Available & Scalable Web Application
 
-A practical AWS cloud project demonstrating the design and deployment of a **highly available, scalable, secure, and cost-effective web application** using AWS services and following the principles of the **AWS Well-Architected Framework**.
+A practical AWS Cloud project demonstrating the design and deployment of a **highly available, scalable, secure, and cost-effective web application** using AWS services and following the principles of the **AWS Well-Architected Framework**.
 
 ---
 
@@ -118,11 +118,11 @@ Security was considered at multiple layers of the architecture:
 
 ## 📈 Scalability & Availability
 
-The architecture supports scalability through:
+The architecture supports scalability and availability through:
 
 * Application Load Balancer
 * EC2 Auto Scaling
-* Distributed application instances
+* Multiple application instances
 * Managed Amazon RDS database
 * VPC-based network architecture
 
@@ -134,19 +134,23 @@ This allows the application to handle changing workloads while improving reliabi
 
 The complete project documentation contains the detailed implementation process, configuration steps, screenshots, architecture, testing, and cost estimation.
 
-📄 **[Open Project 1 Documentation](project1.pdf)**
+📄 **[Open Project 1 Documentation](project%201.pdf)**
 
 ---
 
 ## 📸 Project Screenshots
 
-Additional screenshots and implementation evidence are included in the project documentation PDF.
+The project architecture and implementation screenshots are included in the project documentation.
+
+### AWS Architecture Diagram
+
+![AWS Infrastructure](Diagram.png)
 
 ---
 
 ## 💰 Cost Considerations
 
-The project also includes a cost estimation section covering the AWS resources used in the architecture.
+The project includes a cost estimation section covering the AWS resources used in the architecture.
 
 The design aims to balance:
 
@@ -154,7 +158,7 @@ The design aims to balance:
 * Scalability
 * Security
 * Performance
-* Cost
+* Cost Optimization
 
 ---
 
@@ -162,7 +166,7 @@ The design aims to balance:
 
 Through this project, I gained practical experience in:
 
-* Designing AWS cloud architectures
+* Designing AWS Cloud architectures
 * Building VPC-based infrastructures
 * Deploying applications on Amazon EC2
 * Configuring Application Load Balancers
@@ -182,7 +186,7 @@ Through this project, I gained practical experience in:
 AWS-Cloud-Projects/
 │
 ├── README.md
-├── project1.pdf
+├── project 1.pdf
 └── Diagram.png
 ```
 
@@ -193,3 +197,29 @@ AWS-Cloud-Projects/
 This project demonstrates the practical design of a **secure, highly available, scalable, and cost-effective web application architecture on AWS**.
 
 It combines networking, compute, database, security, load balancing, and auto-scaling services into a complete cloud solution based on AWS architectural best practices.
+
+---
+
+## 📚 Technologies & AWS Services
+
+**Cloud Platform:** AWS
+
+**Services:**
+
+* Amazon VPC
+* Amazon EC2
+* Amazon RDS
+* Application Load Balancer
+* Auto Scaling
+* AWS Secrets Manager
+* Security Groups
+
+**Core Concepts:**
+
+* High Availability
+* Scalability
+* Load Balancing
+* Network Security
+* Database Security
+* Cost Optimization
+* Cloud Architecture
