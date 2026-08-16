@@ -40,7 +40,7 @@ The project focuses on AWS cloud architecture, networking, security, scalability
 
 ## 📄 Project Documentation
 
-**[📄 Open Project 1 PDF](./project1.pdf)**
+**[📄 Open Project1.PDF](./project1.pdf)**
 
 ---
 
